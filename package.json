@@ -2,12 +2,12 @@
   "name": "ai-code-reviewer",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {
-    "dev": "concurrently -k -n server,client -c magenta,cyan \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
-    "build": "npm run build --prefix client",
-    "start": "npm run start --prefix server",
-    "postinstall": "npm install --prefix server && npm install --prefix client"
-  },
+ "scripts": {
+  "dev": "concurrently -k -n server,client -c magenta,cyan \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
+  "build": "cd client && npm install && npm run build",
+  "start": "npm run start --prefix server",
+  "postinstall": "npm install --prefix server && npm install --prefix client"
+},
   "keywords": [],
   "author": "",
   "license": "ISC",
