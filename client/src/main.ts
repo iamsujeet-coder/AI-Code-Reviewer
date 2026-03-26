@@ -17,8 +17,7 @@ type CodeReviewResponse = {
   assumptions: string[];
 };
 
-const API_BASE = import.meta.env.VITE_API_BASE || "http://localhost:5000";
-
+const API_BASE = import.meta.env.VITE_API_BASE || "";
 function escapeHtml(s: string) {
   return s
     .replaceAll("&", "&amp;")
@@ -200,7 +199,7 @@ document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
 
     <footer class="footer">
       <div class="muted">
-        If the service is unavailable, the app returns a fallback response and displays an error in the footer.
+  Review results depend on backend availability.
       </div>
       <div id="footerError" class="footer-error" aria-live="polite"></div>
     </footer>
